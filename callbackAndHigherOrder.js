@@ -82,22 +82,32 @@ last(names, lastName => {
 */
 
 // CODE HERE 
-
+function contains(array, name, callback){
+  if(array.includes(name) === true) {
+    return callback(true)
+  } else {
+    return callback(false)
+  }}
 
 // UNCOMMENT THE FUNCTION CALL BELOW
 // RUN THIS FILE WITH NODE
 // CHECK YOUR ANSWER
 
-// contains(names, 'Colt', result => {
-//   if(result === true){
-//     console.log('Colt is in the array')
-//   } else {
-//     console.log('Colt is not in the array')
-//   }
-// })
+ contains(names, 'Colt', result => {
+   if(result === true){
+     console.log('Colt is in the array')
+   } else {
+     console.log('Colt is not in the array')
+   }
+ })
 
+//includes returns a boolean so can also do this..
 
-
+//const contains = (arr, nm, cb) => cb(arr.includes(nm))
+//or
+// const contpains = (array, name, callback) => {
+    // return callback(array.includes(name))
+//}
 ////////// PROBLEM 5 //////////
 
 /*
@@ -107,7 +117,9 @@ last(names, lastName => {
 */
 
 // CODE HERE
-
+function unique(array, callback) {
+  if
+}
 /*
   Invoke the uniq function, passing in the names array from above and a callback function.
   The callback function should take in one parameter called uniqArr.
