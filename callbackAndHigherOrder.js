@@ -117,9 +117,18 @@ function contains(array, name, callback){
 */
 
 // CODE HERE
-function unique(array, callback) {
-  if
+const unique = (array, callback) => {
+  for (let i=0; i< array.length;i++){
+    for (let x=i+1; x<arr.length;x++){
+      if(array[i] === array[x]){
+        array.splice(x,1)
+        x--
+      }
+    }
+  }
+  callback(array)
 }
+
 /*
   Invoke the uniq function, passing in the names array from above and a callback function.
   The callback function should take in one parameter called uniqArr.
@@ -139,6 +148,8 @@ function unique(array, callback) {
 */
 
 // CODE HERE 
+const each = (array, callback) => array.forEach((element, index) => callback(element, index))
+
 
 
 /*
@@ -149,7 +160,7 @@ function unique(array, callback) {
 */
 
 // CODE HERE
-
+each(names, (element, index) => `The item at index ${index} is ${element}`)
 
 ////////// PROBLEM 7 //////////
 
